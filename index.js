@@ -62,7 +62,7 @@ function updateActivity() {
     client.query("/status/sessions").then(async function (result) {
 
         //check if the song is paused
-        if (result.MediaContainer.Metadata[0].Player.state != "paused") {
+        if (result.MediaContainer.Metadata[0] == undefined || result.MediaContainer.Metadata[0].Player.state != "paused") {
             console.log("Song playing");
             //search for the song name + artist name on youtube and get the link
             let link = "";
