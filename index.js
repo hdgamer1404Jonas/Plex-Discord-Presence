@@ -62,7 +62,12 @@ function updateActivity() {
     client.query("/status/sessions").then(async function (result) {
 
         //check if the song is paused
-        if (!result.MediaContainer.Metadata || result.MediaContainer.Metadata[0].Player.state != "paused") {
+        if(!result.MediaContainer.Metadata){
+            console.log("No song playing");
+            //reset the activity
+            rpc.request("SET_ACTIVITY", {pid: process.pid, activity: {}})
+
+        }else if (result.MediaContainer.Metadata[0].Player.state != "paused") {
             console.log("Song playing");
             //search for the song name + artist name on youtube and get the link
             let link = "";
