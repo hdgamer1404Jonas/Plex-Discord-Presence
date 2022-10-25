@@ -1,5 +1,5 @@
 # Plex-Discord-Presence
-Display the current song youre listening to on pley in discord
+Display the current song youre listening to on plex in discord
 
 ## How to set up
 1. Clone this repository into any folder on your computer. It has to be the same computer, discord is installed on. I only tested it on Windows, idk if it works on other operating systems.
