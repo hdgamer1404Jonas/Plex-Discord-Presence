@@ -9,3 +9,4 @@ Display the current song youre listening to on plex in discord
 
 **Note:**
 Due to discords limitations, the status can only be updated every 15 seconds.
+https://i.imgur.com/YPzyg6X.png
